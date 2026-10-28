@@ -148,9 +148,17 @@ export default function LoginPage() {
                 <div className="pt-2">
                   <button 
                     type="submit" 
-                    className="w-full bg-[#106840] text-white hover:bg-[#0D4B2D] font-semibold text-sm py-4 rounded-lg transition-all shadow-lg shadow-[#106840]/20 hover:shadow-xl hover:shadow-[#106840]/30"
+                    disabled={loginLoading}
+                    className="w-full bg-[#106840] text-white hover:bg-[#0D4B2D] font-semibold text-sm py-4 rounded-lg transition-all shadow-lg shadow-[#106840]/20 hover:shadow-xl hover:shadow-[#106840]/30 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    Log In
+                    {loginLoading ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Logging in...
+                      </>
+                    ) : (
+                      "Log In"
+                    )}
                   </button>
                 </div>
               </form>
@@ -228,9 +236,17 @@ export default function LoginPage() {
                 <div className="pt-2">
                   <button 
                     type="submit" 
-                    className="w-full bg-[#D9941E] text-white hover:bg-[#c7850f] font-semibold text-sm py-4 rounded-lg transition-all shadow-lg shadow-[#D9941E]/20 hover:shadow-xl hover:shadow-[#D9941E]/30"
+                    disabled={registerLoading}
+                    className="w-full bg-[#D9941E] text-white hover:bg-[#c7850f] font-semibold text-sm py-4 rounded-lg transition-all shadow-lg shadow-[#D9941E]/20 hover:shadow-xl hover:shadow-[#D9941E]/30 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    Register
+                    {registerLoading ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Registering...
+                      </>
+                    ) : (
+                      "Register"
+                    )}
                   </button>
                 </div>
               </form>
