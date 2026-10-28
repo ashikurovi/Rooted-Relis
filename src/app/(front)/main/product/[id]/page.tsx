@@ -267,8 +267,14 @@ export default function ProductDetailPage() {
 
           {/* Price */}
           <div className="flex items-end space-x-4 mb-8">
-            <span className="text-black font-semibold text-3xl">৳{product.currentPrice || product.originalPrice}</span>
-            {Number(product.originalPrice) > Number(product.currentPrice) && (
+            {product.currentPrice && product.currentPrice > 0 ? (
+              <span className="text-black font-semibold text-3xl">৳{product.currentPrice}</span>
+            ) : product.originalPrice && product.originalPrice > 0 ? (
+              <span className="text-black font-semibold text-3xl">৳{product.originalPrice}</span>
+            ) : (
+              <span className="text-black font-semibold text-3xl">Coming Soon</span>
+            )}
+            {Number(product.originalPrice) > Number(product.currentPrice) && product.currentPrice && product.currentPrice > 0 && (
               <span className="text-gray-400 line-through text-lg font-medium mb-1">৳{product.originalPrice}</span>
             )}
           </div>

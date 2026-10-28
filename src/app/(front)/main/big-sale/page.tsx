@@ -206,7 +206,7 @@ export default function BigSalePage() {
                                 </span>
                               )}
                               <span className="text-[#106840] font-black text-base sm:text-lg">
-                                ৳{product.currentPrice || 0}
+                                {product.currentPrice ? `৳${product.currentPrice}` : product.originalPrice ? `৳${product.originalPrice}` : 'Coming Soon'}
                               </span>
                             </div>
                           </div>
