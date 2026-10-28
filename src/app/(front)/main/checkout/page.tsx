@@ -410,7 +410,7 @@ export default function CheckoutPage() {
                     <div key={`${item.id}-${idx}`} className="flex gap-4 items-center pb-4 border-b-[1px] border-gray-100 last:border-b-0 last:pb-0">
                       <div className="relative w-16 h-16 bg-gray-50 rounded-lg border-[1px] border-gray-200 overflow-visible shrink-0 flex items-center justify-center">
                         {item.image ? (
-                          <img src={item.image.startsWith('http') ? item.image : `https://codegrid-api.vercel.app${item.image.startsWith('/') ? '' : '/'}${item.image}`} alt={item.title} className="w-full h-full object-cover rounded-lg" />
+                          <img src={item.image.startsWith('http') ? item.image : `https://rooted-relis-f4g9.vercel.app${item.image.startsWith('/') ? '' : '/'}${item.image}`} alt={item.title} className="w-full h-full object-cover rounded-lg" />
                         ) : (
                           <span className="text-[10px] text-gray-400 font-medium">NO IMG</span>
                         )}

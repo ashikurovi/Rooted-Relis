@@ -104,7 +104,7 @@ export default function BandDetailsPage() {
               <label htmlFor="image" className="text-sm font-black uppercase text-black">Brand Logo / Image</label>
               {brand.existingPicture && !brand.image && (
                 <div className="mb-2">
-                  <img src={`https://codegrid-api.vercel.app${brand.existingPicture}`} alt="Current brand picture" className="w-20 h-20 object-cover border rounded" />
+                  <img src={`https://rooted-relis-f4g9.vercel.app${brand.existingPicture}`} alt="Current brand picture" className="w-20 h-20 object-cover border rounded" />
                 </div>
               )}
               <input

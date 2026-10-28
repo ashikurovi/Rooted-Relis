@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.codegrid.shop';
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://rooted-relis-f4g9.vercel.app';
 
 export const fetchApi = async (endpoint: string, options: RequestInit = {}) => {
   const url = `${BASE_URL}${endpoint}`;

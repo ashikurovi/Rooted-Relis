@@ -46,14 +46,14 @@ export default function CustomOrderPage() {
     id: p.id,
     name: p.productName,
     price: p.price,
-    image: p.image?.startsWith('http') ? p.image : `https://codegrid-api.vercel.app${p.image?.startsWith('/') ? '' : '/'}${p.image}`
+    image: p.image?.startsWith('http') ? p.image : `https://rooted-relis-f4g9.vercel.app${p.image?.startsWith('/') ? '' : '/'}${p.image}`
   }));
 
   const bottleOptions = products.filter(p => p.category === "Bottles").map(p => ({
     id: p.id,
     name: p.productName,
     price: p.price,
-    image: p.image?.startsWith('http') ? p.image : `https://codegrid-api.vercel.app${p.image?.startsWith('/') ? '' : '/'}${p.image}`
+    image: p.image?.startsWith('http') ? p.image : `https://rooted-relis-f4g9.vercel.app${p.image?.startsWith('/') ? '' : '/'}${p.image}`
   }));
 
   const corporatePackages = products.filter(p => p.category === "Corporate").map(p => ({
@@ -275,7 +275,7 @@ export default function CustomOrderPage() {
                       {selectedPackage.items.map((item: any, idx: number) => {
                           let imgUrl = item.imageUrl || null;
                           if (imgUrl && !imgUrl.startsWith('http')) {
-                            imgUrl = `https://codegrid-api.vercel.app${imgUrl.startsWith('/') ? '' : '/'}${imgUrl}`;
+                            imgUrl = `https://rooted-relis-f4g9.vercel.app${imgUrl.startsWith('/') ? '' : '/'}${imgUrl}`;
                           }
                           return (
                             <div key={idx} className=\"border-[1px] border-gray-200 overflow-hidden bg-white rounded-lg\">

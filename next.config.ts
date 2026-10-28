@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'i.ibb.co.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'rooted-relis-f4g9.vercel.app',
+      },
     ],
   },
 };

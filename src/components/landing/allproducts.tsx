@@ -43,7 +43,7 @@ export function AllProducts() {
   const getImgUrl = (url: string) => {
     if (!url) return "";
     if (url.startsWith('http')) return url;
-    return `https://codegrid-api.vercel.app${url.startsWith('/') ? '' : '/'}${url}`;
+    return `https://rooted-relis-f4g9.vercel.app${url.startsWith('/') ? '' : '/'}${url}`;
   };
 
   const filteredProducts = activeCategory === "ALL"

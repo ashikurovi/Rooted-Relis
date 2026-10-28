@@ -67,7 +67,7 @@ export function Navbar() {
                 }
             }
             if (imgUrl && !imgUrl.startsWith('http')) {
-                imgUrl = `https://codegrid-api.vercel.app${imgUrl.startsWith('/') ? '' : '/'}${imgUrl}`;
+                imgUrl = `https://rooted-relis-f4g9.vercel.app${imgUrl.startsWith('/') ? '' : '/'}${imgUrl}`;
             }
             return {
                 id: product.id,

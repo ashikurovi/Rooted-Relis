@@ -186,7 +186,7 @@ export default function OrderTrackingPage() {
                                         <div className="flex items-center gap-4">
                                             {item.product?.thumbnail ? (
                                                 <div className="w-12 h-12 bg-[#106840]/5 rounded-lg overflow-hidden flex-shrink-0">
-                                                    <img src={item.product.thumbnail.startsWith('http') ? item.product.thumbnail : `https://codegrid-api.vercel.app${item.product.thumbnail.startsWith('/') ? '' : '/'}${item.product.thumbnail}`} alt={item.product.title || 'Product'} className="w-full h-full object-cover" />
+                                                    <img src={item.product.thumbnail.startsWith('http') ? item.product.thumbnail : `https://rooted-relis-f4g9.vercel.app${item.product.thumbnail.startsWith('/') ? '' : '/'}${item.product.thumbnail}`} alt={item.product.title || 'Product'} className="w-full h-full object-cover" />
                                                 </div>
                                             ) : (
                                                 <div className="w-12 h-12 bg-[#106840]/5 rounded-lg flex-shrink-0"></div>

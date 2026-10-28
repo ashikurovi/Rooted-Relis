@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { BASE_URL } from '@/api/baseApi';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rootedrelish.com';
@@ -21,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   try {
-    const res = await fetch('https://api.codegrid.shop/products', {
+    const res = await fetch(`${BASE_URL}/products`, {
       next: { revalidate: 3600 },
     });
     if (res.ok) {
@@ -45,7 +46,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   try {
-    const res = await fetch('https://codegrid-api.vercel.app/blogs', {
+    const res = await fetch(`${BASE_URL}/blogs`, {
       next: { revalidate: 3600 },
     });
     if (res.ok) {

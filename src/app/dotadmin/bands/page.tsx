@@ -218,7 +218,7 @@ export default function BrandsManagementPage() {
                     <TableCell>
                       <div className="flex items-center gap-2">
                         {brand.picture && (
-                          <img src={`https://codegrid-api.vercel.app${brand.picture}`} alt={brand.name} className="w-8 h-8 rounded object-cover border" />
+                          <img src={`https://rooted-relis-f4g9.vercel.app${brand.picture}`} alt={brand.name} className="w-8 h-8 rounded object-cover border" />
                         )}
                         {brand.name}
                       </div>

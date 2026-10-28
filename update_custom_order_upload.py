@@ -21,7 +21,7 @@ state_add = """  const [uploadingImage, setUploadingImage] = useState(false);
       if (res && res.url) {
         let url = res.url;
         if (!url.startsWith('http')) {
-          url = `https://codegrid-api.vercel.app${url.startsWith('/') ? '' : '/'}${url}`;
+          url = `https://rooted-relis-f4g9.vercel.app${url.startsWith('/') ? '' : '/'}${url}`;
         }
         setDesignReference(url);
         alert("Design uploaded successfully!");
