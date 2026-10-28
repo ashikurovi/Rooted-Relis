@@ -39,14 +39,14 @@ export function WhatsAppButton() {
           <div className="flex items-center gap-3 relative z-10">
             <div className="w-12 h-12 bg-white rounded-full p-0.5 overflow-hidden flex-shrink-0">
               <img 
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Afrin&backgroundColor=d1d4f9" 
-                alt="Afrin Jahan" 
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rafin&backgroundColor=c0ebd7" 
+                alt="Rafin Mahmud" 
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
             <div>
-              <h3 className="font-bold text-sm tracking-wide">Afrin Jahan</h3>
-              <p className="text-[10px] text-green-100 uppercase tracking-wider font-semibold">Sales Executive</p>
+              <h3 className="font-bold text-sm tracking-wide">Rafin Mahmud</h3>
+              <p className="text-[10px] text-green-100 uppercase tracking-wider font-semibold">Owner</p>
             </div>
           </div>
           <button 
