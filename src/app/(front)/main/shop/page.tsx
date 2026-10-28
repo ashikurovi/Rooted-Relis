@@ -237,13 +237,13 @@ export default function ShopPage() {
 
                           {/* Price */}
                           <div className="flex items-center space-x-2 mt-auto mb-3">
-                            {Number(product.originalPrice) > Number(product.currentPrice) && (
+                            {product.originalPrice && product.currentPrice && Number(product.originalPrice) > Number(product.currentPrice) && (
                               <span className="text-gray-400 line-through text-xs sm:text-sm font-medium">
                                 ৳{product.originalPrice}
                               </span>
                             )}
                             <span className="text-[#106840] font-black text-base sm:text-lg">
-                              ৳{product.currentPrice || product.originalPrice}
+                              {product.currentPrice && Number(product.currentPrice) > 0 ? `৳${product.currentPrice}` : product.originalPrice && Number(product.originalPrice) > 0 ? `৳${product.originalPrice}` : 'Coming Soon'}
                             </span>
                           </div>
                         </div>

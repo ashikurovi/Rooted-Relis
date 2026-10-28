@@ -16,6 +16,7 @@ export default function LoginPage() {
   const [loginPassword, setLoginPassword] = useState("");
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [loginError, setLoginError] = useState("");
+  const [loginLoading, setLoginLoading] = useState(false);
 
   // Register State
   const [registerName, setRegisterName] = useState("");
@@ -24,10 +25,12 @@ export default function LoginPage() {
   const [showRegisterPassword, setShowRegisterPassword] = useState(false);
   const [registerError, setRegisterError] = useState("");
   const [registerSuccess, setRegisterSuccess] = useState("");
+  const [registerLoading, setRegisterLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoginError("");
+    setLoginLoading(true);
     try {
       const res = await loginUser({ email: loginEmail, password: loginPassword });
       if (res.statusCode === 200 || res.statusCode === 201) {
@@ -41,6 +44,8 @@ export default function LoginPage() {
       }
     } catch (err) {
       setLoginError("An error occurred during login.");
+    } finally {
+      setLoginLoading(false);
     }
   };
 
@@ -48,6 +53,7 @@ export default function LoginPage() {
     e.preventDefault();
     setRegisterError("");
     setRegisterSuccess("");
+    setRegisterLoading(true);
     try {
       const res = await createUser({ name: registerName, email: registerEmail, password: registerPassword });
       if (res.statusCode === 201) {
@@ -60,6 +66,8 @@ export default function LoginPage() {
       }
     } catch (err) {
       setRegisterError("An error occurred during registration.");
+    } finally {
+      setRegisterLoading(false);
     }
   };
 

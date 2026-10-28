@@ -200,14 +200,14 @@ export default function BigSalePage() {
 
                             {/* Price */}
                             <div className="flex items-center space-x-2 mt-auto mb-3">
-                              {product.originalPrice && product.originalPrice > product.currentPrice && (
-                                <span className="text-gray-400 line-through text-xs sm:text-sm font-medium">
-                                  ৳{product.originalPrice || 0}
-                                </span>
-                              )}
-                              <span className="text-[#106840] font-black text-base sm:text-lg">
-                                {product.currentPrice ? `৳${product.currentPrice}` : product.originalPrice ? `৳${product.originalPrice}` : 'Coming Soon'}
-                              </span>
+                              {product.originalPrice && product.currentPrice && product.originalPrice > product.currentPrice && (
+  <span className="text-gray-400 line-through text-xs sm:text-sm font-medium">
+    ৳{product.originalPrice}
+  </span>
+)}
+<span className="text-[#106840] font-black text-base sm:text-lg">
+  {product.currentPrice && product.currentPrice > 0 ? `৳${product.currentPrice}` : product.originalPrice && product.originalPrice > 0 ? `৳${product.originalPrice}` : 'Coming Soon'}
+</span>
                             </div>
                           </div>
                         </Link>
