@@ -420,7 +420,7 @@ export default function ProductDetailPage() {
                 e.preventDefault();
                 const productUrl = window.location.href;
                 const message = encodeURIComponent(`Hi, I'm interested in: ${product.title}\nPrice: ৳${product.currentPrice || product.originalPrice || 0}\nProduct ID: ${product.id}\nLink: ${productUrl}`);
-                window.open(`https://wa.me/8801942142346?text=${message}`, '_blank');
+                window.open(`https://wa.me/8801634354977?text=${message}`, '_blank');
               }}
             >
               <svg

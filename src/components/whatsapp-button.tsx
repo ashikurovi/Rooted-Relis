@@ -64,7 +64,7 @@ export function WhatsAppButton() {
           </div>
           
           <Link
-            href="https://wa.me/8801942142346"
+            href="https://wa.me/8801634354977"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd59] text-white font-medium py-3 rounded-xl transition-colors shadow-sm"
